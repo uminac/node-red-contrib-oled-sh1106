@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "Abdul Hadi Fikri",
+    "email": "hadifikri@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/HendrikRoth/node-red-contrib-oled/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "i2c-bus": "^1.2.4",
+    "oled-font-5x7": "^1.0.0",
+    "update": "^0.7.4"
+  },
+  "deprecated": false,
+  "description": "Node-Red node for controlling OLED SH1106 displays",
+  "homepage": "https://github.com/HendrikRoth/node-red-contrib-oled#readme",
+  "keywords": [
+    "node-red"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "node-red-contrib-oled-sh1106",
+  "node-red": {
+    "nodes": {
+      "oled": "oled.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HendrikRoth/node-red-contrib-oled.git"
+  },
+  "scripts": {},
+  "version": "0.1.0"
+}

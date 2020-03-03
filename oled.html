@@ -1,0 +1,91 @@
+<script type="text/javascript">
+  RED.nodes.registerType('oled-config', {
+    category: 'config',
+    defaults: {
+      name: {
+        value: '',
+        require: false
+      },
+      width: {
+        value: 128,
+        type: 'number',
+        require: true
+      },
+      height: {
+        value: 64,
+        type: 'number',
+        require: true
+      },
+      address: {
+        value: 0x3c,
+        type: 'number',
+        require: true
+      }
+    },
+    label: function() {
+      return this.name || 'OLED' + this.address;
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="oled-config">
+  <div class='form-row'>
+  	<label for='node-config-input-name'><i class='fa fa-tag'></i> Name</label>
+  	<input type='text' id='node-config-input-name'/>
+  </div>
+  <div class='form-row'>
+  	<label for='node-config-input-address'><i class='fa'></i> Bus Address</label>
+  	<input type='text' id='node-config-input-address' />
+  </div>
+  <div class='form-row'>
+  	<label for='node-config-input-width'><i class='fa'></i> Width</label>
+  	<input type='text' id='node-config-input-width' />
+  </div>
+  <div class='form-row'>
+  	<label for='node-config-input-height'><i class='fa'></i> Height</label>
+  	<input type='text' id='node-config-input-height' />
+  </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('StringAtPage', {
+    category: 'oled',
+    color: '#FFCC66',
+    icon: 'OledString.png',
+    defaults: {
+      name: {
+        value: '',
+        required: false
+      },
+      display: {
+        type: 'oled-config'
+      }
+    },
+    inputs: 1,
+    outputs: 0,
+    label: function() {
+      return this.name || 'StringAtPage';
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="StringAtPage">
+  <div class='form-row'>
+  	<label for='node-config-input-display'><i class='fa'></i> Display</label>
+  	<input type='text' id='node-input-display'/>
+  </div>
+  <div class='form-row'>
+  	<label for='node-config-input-name'><i class='fa fa-tag'></i> Name</label>
+  	<input type='text' id='node-input-name'/>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="StringAtPage">
+     <p>A node that write the inlet string with multiple of font 5x7</p>
+     <p>Payload should contain the font size (multiple of the original one in 5x7), the line where the string starts, and the text itself</p>
+  <p>size: <b>msg.payload.size</b></p>
+  <p>abscissa: <b>msg.payload.size</b></p>
+  <p>ordinate: <b>msg.payload.line</b></p>
+  <p>string: <b>msg.payload.text</b></p>
+  <p>Example: <b>{"size":1,"line":1,"text":"Oled"}</b></p>
+</script>
