@@ -31,5 +31,5 @@
     "url": "git+https://github.com/hadifikri/node-red-contrib-oled-sh1106.git"
   },
   "scripts": {},
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
