@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "node-red-contrib-oled-sh1106",
+  "name": "nodered-sh1106",
   "node-red": {
     "nodes": {
       "oled": "oled.js"
