@@ -9,14 +9,15 @@
   "bundleDependencies": false,
   "dependencies": {
     "i2c-bus": "^1.2.4",
-    "oled-font-5x7": "^1.0.0",
-    "update": "^0.7.4"
+    "oled-font-5x7": "^1.0.0"
   },
   "deprecated": false,
   "description": "Node-Red node for controlling OLED SH1106 displays",
   "homepage": "https://github.com/hadifikri/node-red-contrib-oled-sh1106#readme",
   "keywords": [
-    "node-red"
+    "node-red",
+    "sh1106",
+    "oled"
   ],
   "license": "MIT",
   "main": "index.js",
