@@ -24,7 +24,7 @@
   "name": "nodered-sh1106",
   "node-red": {
     "nodes": {
-      "oled": "oled.js"
+      "oled-sh1106": "oled.js"
     }
   },
   "repository": {
